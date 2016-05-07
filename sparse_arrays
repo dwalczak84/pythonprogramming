@@ -1,0 +1,21 @@
+# https://www.hackerrank.com/challenges/sparse-arrays
+
+# Enter your code here. Read input from STDIN. Print output to STDOUT
+
+import sys
+
+strings = []
+queries = []
+
+N = int(raw_input())
+for i in range(0, N):
+    s = raw_input()
+    strings.append(s)
+
+Q = int(raw_input())
+for i in range(0, Q):
+    s = raw_input()
+    queries.append(s)
+
+for j in range(0, Q):
+    print len([i for i in strings if queries[j] == i])
